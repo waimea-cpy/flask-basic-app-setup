@@ -51,6 +51,7 @@ def delete(itemId):
 
 
 # ABOUT PAGE ---------------------------------------------------
+@main.get("/about")
 @main.get("/about/")
 def about():
     return render_template("pages/about.jinja")
