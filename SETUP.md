@@ -72,14 +72,14 @@ flask run --debug
 Deploying to **Render**, an external web app host, is pretty simple. Once setup, every time you push changes to your repo, the app will be updated and redeployed.
 
 
-### Your Render Account
+### Render Account
 
 1. Go to [Render](https://render.com/) and **Sign in with GitHub**
 
 2. Sign up for the Hobby ($0) plan
 
 
-### Create a Project
+### Create a Web App
 
 1. Create a new **Web Service**
 
@@ -87,7 +87,10 @@ Deploying to **Render**, an external web app host, is pretty simple. Once setup,
 
 3. Select this repo from the list
 
-4. In the deployment settings, set the following:
+
+### Configure the Web App
+
+1. In the deployment settings, set the following:
 
     - Name: Can customise if you wish
     - Language: **Python 3**
@@ -98,9 +101,16 @@ Deploying to **Render**, an external web app host, is pretty simple. Once setup,
     - Start Command: `flask run --host=0.0.0.0 --port=10000`
     - Instance Type: **Free**
 
-5. **Deploy** the web service, and it should be good to go!
+2. **Deploy** the web service, and it should be good to go!
 
-6. Note the the **public URL** generated for the deployed app.
+
+### Access the Deployed App
+
+In the Render dashboard:
+
+- Go to your we app
+
+- Note the the **public URL** generated for the deployed app.
 
 
 ### Updating the Deployed App

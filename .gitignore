@@ -9,6 +9,6 @@ __pycache__/
 venv/
 .venv/
 
-# Database - Comment this out to reset deployed DB
+# Database
 data.db
 
