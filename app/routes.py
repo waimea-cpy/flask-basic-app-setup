@@ -10,11 +10,9 @@ main = Blueprint("main", __name__)
 @main.get("/")
 def index():
     # Get all the things from the DB
-    query = "SELECT * FROM things"
     conn = connect_db()
-    cursor = conn.cursor()
-    cursor.execute(query)
-    things = cursor.fetchall()
+    query = "SELECT * FROM things"
+    things = conn.execute(query).fetchall()
     conn.close()
 
     # Show the page with the DB data
@@ -28,10 +26,9 @@ def add():
     name = request.form["name"]
 
     # Add the thing to the DB
-    query = "INSERT INTO things (name) VALUES (?)"
     conn = connect_db()
-    cursor = conn.cursor()
-    cursor.execute(query, (name,))
+    query = "INSERT INTO things (name) VALUES (?)"
+    conn.execute(query, (name,))
     conn.commit()
     conn.close()
 
@@ -43,10 +40,9 @@ def add():
 @main.get("/delete/<int:itemId>")
 def delete(itemId):
     # Delete the thing from the DB
-    query = "DELETE FROM things WHERE id=?"
     conn = connect_db()
-    cursor = conn.cursor()
-    cursor.execute(query, (itemId,))
+    query = "DELETE FROM things WHERE id=?"
+    conn.execute(query, (itemId,))
     conn.commit()
     conn.close()
 
