@@ -14,9 +14,9 @@ To support setting up and developing with the Flask server, add the following ex
 
 You should also have the following (just to n=make life better):
 
-- SQLite3 Editor (for databases)
-- Code Spell Checker
-- Error Lens
+- **SQLite3 Editor** (for databases)
+- **Code Spell Checker** (because speeling is hard!)
+- **Error Lens** (places error messages inline, next to code)
 
 
 ### Create the Virtual Environment
@@ -63,12 +63,6 @@ If you are returning to your project, you do not need to recreate your virtual e
 The Flask project is configured as a module called **app** (with main code in **\_\_init__.py**), which allows the the server to be run very easily with:
 
 ```
-flask run
-```
-
-Or to get full debug info:
-
-```
 flask run --debug
 ```
 
@@ -89,7 +83,7 @@ Deploying to **Render**, an external web app host, is pretty simple. Once setup,
 
 1. Create a new **Web Service**
 
-2. To see your list of GitHub repos, you will need to add credentials so that Render has access to your repos.
+2. To see your list of **GitHub repos**, you will need to add credentials so that Render has access to your repos.
 
 3. Select this repo from the list
 
@@ -104,7 +98,12 @@ Deploying to **Render**, an external web app host, is pretty simple. Once setup,
     - Start Command: `flask run --host=0.0.0.0 --port=10000`
     - Instance Type: **Free**
 
-5. Deploy the web service, and it should be good to go!
+5. **Deploy** the web service, and it should be good to go!
 
-You will need to copy the public URL generated for the deployed app.
+6. Note the the **public URL** generated for the deployed app.
+
+
+### Updating the Deployed App
+
+Every time you **push changes** to your GitHub repo, Render will **automatically re-deploy** the app - there is nothing you need to do.
 

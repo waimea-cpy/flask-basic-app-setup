@@ -1,15 +1,16 @@
-{#
-    About page
-    - Information about Flask
-    - Information about Jinja
-#}
+{#=====================================================
+  About page
+  - Information about Flask
+  - Information about Jinja
+  - Information about SQLite
+=====================================================#}
 
 {% extends 'pages/base.jinja' %}
 
 
 {% block title %}
 
-    About Flask and Jinja
+    Flask Demo - About Flask and Jinja
 
 {% endblock %}
 
@@ -19,96 +20,54 @@
     <section id="info">
 
         <article>
-
             <header>
-                <h1>What is Flask?</h1>
+                <img src="/static/images/flask.webp" alt="Flask Logo">
             </header>
 
-            <figure>
-                <img src="/static/images/flask.webp" alt="Flask Logo">
-
-                <figcaption>The Flask logo</figcaption>
-            </figure>
-
-            <p>Flask is a <strong>web back-end application framework</strong>. It is written in the <strong>Python</strong> programming language and provides features such as:</p>
-
-            <ul>
-                <li>Handling HTTP requests: GET, POST</li>
-                <li>URL routing of simple URLs</li>
-                <li>Serving of static files (e.g. CSS, images)</li>
-                <li>Templating via Jinja2 templates</li>
-            </ul>
-
-            <p>Flask also supports extensions that can add application features, such as form validation, upload handling, authentication, etc.</p>
-
-            <p>Flask was created in 2010, and since then has been regularly voted the most popular web framework in the Python Developers Survey. Applications that use the Flask framework include Pinterest and LinkedIn.</p>
+            <p>Flask is a <strong>web back-end application framework</strong>, written in <strong>Python</strong>. Created in 2010, Flask is regularly voted the most popular Python web framework. Applications that use Flask include Pinterest and LinkedIn.</p>
 
             <footer>
                 <p>Find out more about <a href="https://flask.palletsprojects.com/en/stable/">Flask</a></p>
             </footer>
-
         </article>
 
 
         <article>
-
             <header>
-                <h1>What is Jinja?</h1>
+                <img src="/static/images/jinja2.png" alt="Jinja Logo">
             </header>
 
-            <figure>
-                <img src="/static/images/jinja2.png" alt="Jinja Logo">
-
-                <figcaption>The Jinja logo</figcaption>
-            </figure>
-
             <p>Jinja is a <strong>templating engine</strong>. Special placeholders in the template allow data to be passed into the template and programmatic operations (e.g. conditions, loops, etc.) using a syntax similar to Python.</p>
-
-            <p>Jinja allow for things like:</p>
-
-            <ul>
-                <li>Customisation of HTML tags</li>
-                <li>Conditional page sections (e.g. based on if the user is logged in)</li>
-                <li>Looping over data items (e.g. data retrieved from a database)</li>
-            </ul>
-
-            <p>Jinja was created by the same team behind Flask, so integrates very well. It is the default template engine for Flask.</p>
 
             <footer>
                 <p>Find out more about <a href="https://jinja.palletsprojects.com/en/stable/">Jinja</a></p>
             </footer>
-
         </article>
 
 
         <article>
-
             <header>
-                <h1>What is SQLite?</h1>
+                <img src="/static/images/sqlite.png" alt="SQLite Logo">
             </header>
 
-            <figure>
-                <img src="/static/images/sqlite.png" alt="SQLite Logo">
-
-                <figcaption>The SQLite logo</figcaption>
-            </figure>
-
             <p>SQLite is a lightweight, self-contained <strong>database engine</strong> that doesn't require a separate server to operate. It's ideal for small applications because it stores all data in a <strong>single file</strong> and is easy to set up.</p>
-
-            <p>SQLite uses SQL to:</p>
-
-            <ul>
-                <li>Create tables</li>
-                <li>INSERT data records</li>
-                <li>SELECT records that match certain criteria</li>
-                <li>UPDATE data records</li>
-                <li>DELETE data records</li>
-            </ul>
 
             <footer>
                 <p>Find out more about <a href="https://www.sqlite.org/">SQLite</a></p>
             </footer>
+        </article>
 
+
+        <article>
+            <header>
+                <img src="/static/images/picocss.png" alt="PicoCSS Logo">
+            </header>
+
+            <p>PicoCSS is a minimalist and lightweight <strong>starter stylesheet</strong> that prioritizes semantic syntax, making every HTML element responsive and elegant by default. It acts as a great starting point for any website.</p>
+
+            <footer>
+                <p>Find out more about <a href="https://picocss.com">PicoCSS</a></p>
+            </footer>
         </article>
 
     </section>
