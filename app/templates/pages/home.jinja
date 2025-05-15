@@ -1,0 +1,51 @@
+{#
+    Home page
+    - Hero style greeting banner
+#}
+
+{% extends 'pages/base.jinja' %}
+
+
+{% block title %}
+
+    Flask App Template
+
+{% endblock %}
+
+
+{% block content %}
+
+    <section id="hero">
+        <h1>Example Web App</h1>
+    </section>
+
+    <section id="things">
+
+        <article>
+            <h2>Things</h2>
+
+            <ul>
+                {% for thing in things %}
+                    <li>
+                        {{ thing['name'] }}
+                        <a href="/delete/{{ thing['id'] }}">Delete</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </article>
+
+        <article>
+            <form action="/add" method="POST">
+                <label>
+                    Name
+                    <input type="text" name="name" required>
+                </label>
+                <button type="submit">Add Item</button>
+            </form>
+        </article>
+
+    </section>
+
+
+{% endblock %}
+

@@ -1,0 +1,9 @@
+#-------------------------------------------------------
+# Folders and files that should not be pushed to GitHub
+#-------------------------------------------------------
+
+# Compiled bytecode
+__pycache__/
+
+# Virtual Python environment
+venv/

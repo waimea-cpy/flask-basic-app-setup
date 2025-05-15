@@ -1,0 +1,29 @@
+/* HERO -------------------------------------------- */
+
+#hero h1 {
+    background-color: var(--pico-primary-background);
+    color: var(--pico-primary-inverse);
+    font-size: 6rem;
+    padding: 0.5em;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+
+/* THINGS LIST -------------------------------------------- */
+
+#things {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+/* ABOUT INFO -------------------------------------------- */
+
+#info {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}

@@ -1,0 +1,7 @@
+#--------------------------------------
+# Required packages to install via pip
+#--------------------------------------
+
+# Flask framework
+Flask
+
